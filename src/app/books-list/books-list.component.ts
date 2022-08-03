@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class BooksListComponent implements OnInit {
   books:any;
   searchValue:any='angular';
+  btnDisabled=false;
   constructor(
     private http: HttpClient,
   ) { }
@@ -22,9 +23,11 @@ export class BooksListComponent implements OnInit {
       console.log('value is required');
       return;
     }
+    this.btnDisabled=true;
   
     let url=`https://www.googleapis.com/books/v1/volumes?q=${this.searchValue}`
     this.http.get(url).subscribe((data:any) => {
+      this.btnDisabled=false;
         console.log(data);
         this.books=data;
     });

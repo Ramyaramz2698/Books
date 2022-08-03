@@ -1,5 +1,5 @@
 <input type="text"  [(ngModel)]="searchValue" name="searchValue">
-<button (click)="getList()">search</button>
+  <button class="btn btn-primary" (click)="getList()" [disabled]="btnDisabled">search</button>
 <!-- <p>
   SearchValue:{{searchValue}}
 </p> -->
