@@ -1,0 +1,54 @@
+<input type="text"  [(ngModel)]="searchValue" name="searchValue">
+<button (click)="getList()">search</button>
+<!-- <p>
+  SearchValue:{{searchValue}}
+</p> -->
+<p>
+total:{{books?.totalItems}}
+</p>
+<div *ngFor="let item of books?.items; " style="border: 2px solid black;margin-top: 5px;"> 
+    <app-common-book [book]="item"></app-common-book>
+    <a [routerLink]="['/view']" [queryParams]="{id: item.id}">
+        viewbook
+    </a> 
+    <!-- <p>
+        title:{{item.volumeInfo.title}}
+    </p>
+    <p>
+        authors:{{item.volumeInfo.authors.join(" & ")}}
+    </p>
+    <p>
+        publisher:{{item.volumeInfo.publisher}}
+    </p>
+    <p>
+        country:{{item.saleInfo.country}}
+    </p>
+     <p>
+        saleability:{{item.saleInfo.saleability}}
+    </p>
+     <p>
+        textSnippet:{{item.searchInfo.textSnippet}}
+    </p>
+<p>
+    isAvailable:{{item.accessInfo.epub.isAvailable ? 'yes':'No'}}
+</p> 
+<p>
+    <a [routerLink]="['/view']" [queryParams]="{id: item.id}">
+        viewbook
+    </a>
+</p> -->
+<!-- <p>
+    inskyOfferType:{{item.offers.inskyOfferType}}
+</p> -->
+    <!-- <p>
+        currencyCode:{{item.listPrice.currencyCode}}
+</p>   -->
+
+        <!-- <img src="http://books.google.com/books/content?id=CAFeDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api" >  -->
+        
+        </div>
+ 
+    
+
+    
+
