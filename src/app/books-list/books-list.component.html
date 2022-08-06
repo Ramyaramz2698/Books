@@ -1,5 +1,10 @@
+<div *ngIf="loader" class="loader"></div>
+<div *ngIf="errorMsg" class="alert alert-danger" role="alert">
+
+{{errorMsg}}
+  </div>
 <input type="text"  [(ngModel)]="searchValue" name="searchValue">
-<button (click)="getList()">search</button>
+<button (click)="getList()" class="btn btn-primary">search</button>
 <!-- <p>
   SearchValue:{{searchValue}}
 </p> -->

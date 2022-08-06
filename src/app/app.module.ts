@@ -9,6 +9,10 @@ import { BookComponent } from './book/book.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CommonBookComponent } from './common-book/common-book.component';
 import { FormComponent } from './form/form.component';
+import { Angularform1Component } from './angularform1/angularform1.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AngularForm2Component } from './angular-form2/angular-form2.component';
+
 
 @NgModule({
   declarations: [
@@ -17,13 +21,17 @@ import { FormComponent } from './form/form.component';
     BookComponent,
     PageNotFoundComponent,
     CommonBookComponent,
-    FormComponent
+    FormComponent,
+    Angularform1Component,
+    AngularForm2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule 
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
